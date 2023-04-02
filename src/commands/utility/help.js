@@ -117,9 +117,8 @@ async function getHelpMenu({ client, guild }) {
   const embed = new EmbedBuilder()
     .setColor(EMBED_COLORS.BOT_EMBED)
     .setThumbnail(client.user.displayAvatarURL())
-    .setDescription(
-      "**About Me:**\n" +
-        `Hello I am **${guild.members.me.displayName}!**\n` +
+    .setTitle(`__ABOUT ME__`)
+    .setDescription(`Hello I am **${guild.members.me.displayName}** bot\n` +
         "A simple multipurpose discord bot which can server all your needs\n\n" +
         `> **Owner**: **EL#0030**\n` +
         `> **Invite Me:** [Here](${client.getInvite()})\n` +
@@ -322,7 +321,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
 
   while (commands.length) {
     let toAdd = commands.splice(0, commands.length > CMDS_PER_PAGE ? CMDS_PER_PAGE : commands.length);
-    toAdd = toAdd.map((cmd) => `\`${prefix}${cmd.name}\``);
+    toAdd = toAdd.map((cmd) => `**${cmd.name}**`);
     arrSplitted.push(toAdd);
   }
 
@@ -330,7 +329,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setDescription(` **${category} Commands**\n\n\n> ` + item.join(", "))
+      .setDescription(` **${category} Commands**\n\n> ` + item.join(", "))
       .setFooter({
         text: `Type ${prefix}help <command> for more command information`,
       });
