@@ -330,7 +330,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setDescription(` **${category} Commands**\n> ` + item.join(", "))
+      .setDescription(` **${category} Commands**\n\n> ` + item.join(", "))
       .setFooter({
         text: `Type ${prefix}help <command> for more command information`,
       });
