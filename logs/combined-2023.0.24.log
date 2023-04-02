@@ -1,0 +1,2 @@
+{"level":30,"time":1674560344657,"pid":17,"hostname":"41c671fb501a","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674560344668,"pid":17,"hostname":"41c671fb501a","msg":"env: BOT_TOKEN cannot be empty"}

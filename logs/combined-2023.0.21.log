@@ -1,0 +1,12 @@
+{"level":30,"time":1674325929801,"pid":17,"hostname":"c0ec07719a31","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674325929802,"pid":17,"hostname":"c0ec07719a31","msg":"env: BOT_TOKEN cannot be empty"}
+{"level":30,"time":1674326058510,"pid":55,"hostname":"c0ec07719a31","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674326058524,"pid":55,"hostname":"c0ec07719a31","msg":"env: BOT_TOKEN cannot be empty"}
+{"level":30,"time":1674334035812,"pid":17,"hostname":"3864b8512c4c","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674334035814,"pid":17,"hostname":"3864b8512c4c","msg":"env: BOT_TOKEN cannot be empty"}
+{"level":30,"time":1674334779966,"pid":17,"hostname":"433feb457469","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674334779969,"pid":17,"hostname":"433feb457469","msg":"env: BOT_TOKEN cannot be empty"}
+{"level":30,"time":1674334835633,"pid":55,"hostname":"433feb457469","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674334835664,"pid":55,"hostname":"433feb457469","msg":"env: BOT_TOKEN cannot be empty"}
+{"level":30,"time":1674334911157,"pid":93,"hostname":"433feb457469","msg":"Validating config file and environment variables"}
+{"level":50,"time":1674334911185,"pid":93,"hostname":"433feb457469","msg":"env: BOT_TOKEN cannot be empty"}
