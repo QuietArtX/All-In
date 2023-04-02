@@ -12,7 +12,7 @@ const {
 } = require("discord.js");
 const { getCommandUsage, getSlashUsage } = require("@handlers/command");
 
-const CMDS_PER_PAGE = 99;
+const CMDS_PER_PAGE = 999;
 const IDLE_TIMEOUT = 30;
 
 /**
@@ -201,7 +201,7 @@ function getSlashCategoryEmbeds(client, category) {
   if (category === "IMAGE") {
     client.slashCommands
       .filter((cmd) => cmd.category === category)
-      .forEach((cmd) => (collector += `\`/${cmd.name}\`\n ❯ ${cmd.description}\n\n`));
+      .forEach((cmd) => (collector += `\`/${cmd.name}\``));
 
     const availableFilters = client.slashCommands
       .get("filter")
@@ -261,8 +261,7 @@ function getSlashCategoryEmbeds(client, category) {
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
       .setAuthor({ name: `${category} Commands` })
-      .setDescription(item.join(", "))
-      .setFooter({ text: `page ${index + 1} of ${arrSplitted.length}` });
+      .setDescription(item.join(", "));
     arrEmbeds.push(embed);
   });
 
@@ -333,7 +332,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
       .setAuthor({ name: `${category} Commands` })
       .setDescription(item.join(", "))
       .setFooter({
-        text: `page ${index + 1} of ${arrSplitted.length} | Type ${prefix}help <command> for more command information`,
+        text: `Type ${prefix}help <command> for more command information`,
       });
     arrEmbeds.push(embed);
   });
