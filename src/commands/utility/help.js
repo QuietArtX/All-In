@@ -12,7 +12,7 @@ const {
 } = require("discord.js");
 const { getCommandUsage, getSlashUsage } = require("@handlers/command");
 
-const CMDS_PER_PAGE = 5;
+const CMDS_PER_PAGE = 99;
 const IDLE_TIMEOUT = 30;
 
 /**
