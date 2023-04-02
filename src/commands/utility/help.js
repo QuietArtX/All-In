@@ -121,7 +121,7 @@ async function getHelpMenu({ client, guild }) {
       "**About Me:**\n" +
         `Hello I am **${guild.members.me.displayName}!**\n` +
         "A simple multipurpose discord bot which can server all your needs\n\n" +
-        `> **Owner**: EL#0030` +
+        `> **Owner**: **EL#0030**\n` +
         `> **Invite Me:** [Here](${client.getInvite()})\n` +
         `> **Support Server:** [Join](${SUPPORT_SERVER})`
     );
