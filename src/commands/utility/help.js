@@ -333,7 +333,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setTitle({ name: `${category} Commands` })
+      .setTitle(`${category} Commands` )
       .setDescription(item.join("\n"))
       .setFooter({
         text: `page ${index + 1} of ${arrSplitted.length} | Type ${prefix}help <command> for more command information`,
