@@ -163,7 +163,7 @@ const waiter = (msg, userId, prefix) => {
         let components = [];
         
         buttonsRow = new ActionRowBuilder().addComponents(components);
-        msg.editable && (await msg.edit({ embeds: [arrEmbeds[currentPage]], components: [menuRow, buttonsRow] }));
+        msg.editable && (await msg.edit({ embeds: [arrEmbeds[currentPage]], components: [menuRow] }));
         break;
       }
 
