@@ -331,7 +331,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
       .setAuthor({ name: `${category} Commands` })
-      .setDescription(item.join("\n"))
+      .setDescription(item.join(", "))
       .setFooter({
         text: `page ${index + 1} of ${arrSplitted.length} | Type ${prefix}help <command> for more command information`,
       });
