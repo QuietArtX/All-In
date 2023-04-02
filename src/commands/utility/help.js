@@ -261,7 +261,7 @@ function getSlashCategoryEmbeds(client, category) {
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
       .setAuthor({ name: `${category} Commands` })
-      .setDescription(item.join("\n"))
+      .setDescription(item.join(", "))
       .setFooter({ text: `page ${index + 1} of ${arrSplitted.length}` });
     arrEmbeds.push(embed);
   });
