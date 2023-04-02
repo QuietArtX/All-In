@@ -120,7 +120,8 @@ async function getHelpMenu({ client, guild }) {
     .setDescription(
       "**About Me:**\n" +
         `Hello I am **${guild.members.me.displayName}!**\n` +
-        "A simple multipurpose discord bot which can serve all your needs\n\n" +
+        "A simple multipurpose discord bot which can server all your needs\n\n" +
+        `> **Owner**: EL#0030` +
         `> **Invite Me:** [Here](${client.getInvite()})\n` +
         `> **Support Server:** [Join](${SUPPORT_SERVER})`
     );
@@ -248,7 +249,7 @@ function getSlashCategoryEmbeds(client, category) {
       const subCmds = cmd.slashCommand.options?.filter((opt) => opt.type === "SUB_COMMAND");
       const subCmdsString = subCmds?.map((s) => s.name).join(", ");
 
-      return `\`/${cmd.name}\`\n ❯ **Description**: ${cmd.description}\n ${
+      return `\`/${cmd.name}\`\n ${
         !subCmds?.length ? "" : `❯ **SubCommands [${subCmds?.length}]**: ${subCmdsString}\n`
       } `;
     });
@@ -329,8 +330,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Commands` })
-      .setDescription(item.join(", "))
+      .setDescription(`**${category} Commands**` + item.join(", "))
       .setFooter({
         text: `Type ${prefix}help <command> for more command information`,
       });
