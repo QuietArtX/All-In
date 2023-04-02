@@ -161,10 +161,7 @@ const waiter = (msg, userId, prefix) => {
 
         // Buttons Row
         let components = [];
-        buttonsRow.components.forEach((button) =>
-          components.push(ButtonBuilder.from(button).setDisabled(arrEmbeds.length > 1 ? false : true))
-        );
-
+        
         buttonsRow = new ActionRowBuilder().addComponents(components);
         msg.editable && (await msg.edit({ embeds: [arrEmbeds[currentPage]], components: [menuRow, buttonsRow] }));
         break;
